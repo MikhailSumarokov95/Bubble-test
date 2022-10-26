@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RandomCreatorLevel : MonoBehaviour
+public class RandomCreatorLevel : CreatorLevels
 {
     [SerializeField] private GameObject[] bubbles;
     [SerializeField] private int countLines;
@@ -13,6 +13,8 @@ public class RandomCreatorLevel : MonoBehaviour
     [ContextMenu("CreateLevel")]
     public void CreateLevel()
     {
+        Destroy(levelOnScene);
+        levelOnScene = Instantiate(new GameObject("level"));
         var yPosition = yStartingPosition;
         for (int i = 0; i < countLines; i++)
         {
@@ -22,7 +24,7 @@ public class RandomCreatorLevel : MonoBehaviour
                 var numberBubbles = Random.Range(0, bubbles.Length - 1);
                 Instantiate(bubbles[numberBubbles],
                     new Vector3(j * distanceBetweenBubbles, yPosition * distanceBetweenBubbles, 0),
-                    Quaternion.identity);
+                    Quaternion.identity, levelOnScene.transform);
             }
         }
     }

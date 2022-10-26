@@ -27,5 +27,6 @@ public class RandomCreatorLevel : CreatorLevels
                     Quaternion.identity, levelOnScene.transform);
             }
         }
+        CreateScreenBorders();
     }
 }

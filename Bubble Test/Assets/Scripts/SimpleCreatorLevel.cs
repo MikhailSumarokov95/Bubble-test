@@ -11,5 +11,6 @@ public class SimpleCreatorLevel : CreatorLevels
     {
         Destroy(levelOnScene);
         levelOnScene = Instantiate(level);
+        CreateScreenBorders();
     }    
 }

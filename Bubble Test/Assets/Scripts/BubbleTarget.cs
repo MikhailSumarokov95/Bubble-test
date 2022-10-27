@@ -15,7 +15,7 @@ public class BubbleTarget : MonoBehaviour
         {
             var ray = new Ray(transform.position, new Vector3(Mathf.Sin(i * Mathf.Deg2Rad), Mathf.Cos(i * Mathf.Deg2Rad)));
             RaycastHit hit;
-            if (Physics.Raycast(ray, out hit))
+            if (Physics.Raycast(ray,out hit, 1f))
             {
                 if (hit.collider.gameObject.tag == tag)
                     hit.collider.GetComponent<BubbleTarget>()?.Hit();

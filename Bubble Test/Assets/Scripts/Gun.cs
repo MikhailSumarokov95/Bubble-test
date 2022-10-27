@@ -8,16 +8,18 @@ public class Gun : MonoBehaviour
     [SerializeField] private float magnitudeForce;
     private GameObject _bubble;
     private BubbleCartridge _bubbleCartidge;
+    private GameManager _gameManager;
 
     private void Start()
     {
         transform.position = Camera.main.ViewportToWorldPoint(new Vector3(0.5f, 0.05f, -Camera.main.transform.position.z));
+        _gameManager = FindObjectOfType<GameManager>();
     }
 
     private void Update()
     {
         if (_bubble == null || _bubbleCartidge.IsMissed) CreateBubbles();
-        if (Input.GetMouseButtonUp(0)) Fire();
+        if (Input.GetMouseButtonUp(0) && !_gameManager.IsPaused) Fire();
     }
 
     private void CreateBubbles()

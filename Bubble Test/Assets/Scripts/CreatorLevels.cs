@@ -49,5 +49,7 @@ public class CreatorLevels : MonoBehaviour
         botBorders.transform.position = new Vector3(rightBotPointScreen.x + (leftTopPointScreen.x - rightBotPointScreen.x) / 2, rightBotPointScreen.y);
         botBorders.transform.rotation = Quaternion.Euler(90, 0, 0);
         _borders[3] = botBorders;
+
+        foreach (var border in _borders) border.tag = "Border";
     }
 }

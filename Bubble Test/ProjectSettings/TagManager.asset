@@ -3,7 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - BlueBubble
+  - WhiteBubble
+  - RedBubble
+  - Undefined
+  - YellowBubble
+  - Border
   layers:
   - Default
   - TransparentFX

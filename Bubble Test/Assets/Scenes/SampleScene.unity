@@ -417,11 +417,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bubbles:
-  - {fileID: 100004, guid: f10a79f37ff522b4280e2844332bef77, type: 3}
-  - {fileID: 100006, guid: 339ec13e94b70ca469275f6f7e29bac3, type: 3}
-  - {fileID: 100006, guid: 3ac3af0756bb3654690122060f9cef08, type: 3}
-  - {fileID: 100004, guid: 9a8ab42d6f1b3a94e92fe881e0e867c6, type: 3}
-  magnitudeForce: 20000
+  - {fileID: 100004, guid: 02f6056118bcb28479d224802b5ec1c4, type: 3}
+  - {fileID: 100006, guid: d3c6edef038e18a47b709bffaa4c9a2f, type: 3}
+  - {fileID: 100006, guid: 079962f4ad28ea743b73aa24246479f2, type: 3}
+  - {fileID: 100004, guid: 7e46eb5d5595d79408fcfe798c46d957, type: 3}
+  magnitudeForce: 2000
 --- !u!4 &1240590561
 Transform:
   m_ObjectHideFlags: 0
@@ -430,7 +430,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1240590559}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1, y: -1, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

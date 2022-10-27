@@ -6,26 +6,28 @@ public class BubbleCartridge : MonoBehaviour
 {
     public bool IsMissed { get; private set; }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision collider)
     {
-        if (other.tag == tag) OnHitted(other);
+        if (collider.gameObject.tag == "Border") return;
+        if (collider.gameObject.tag == tag) OnHitted(collider);
         else Missed();
     }
 
     private void Missed()
     {
         print("miss");
-        GetComponent<Rigidbody>().isKinematic = true;
-        GetComponent<SphereCollider>().isTrigger = true;
+        //GetComponent<Rigidbody>().isKinematic = true;
+        //GetComponent<SphereCollider>().isTrigger = true;
         gameObject.AddComponent<BubbleTarget>();
+        GetComponent<Rigidbody>().isKinematic = true;
         IsMissed = true;
         Destroy(this);
     }
 
-    private void OnHitted(Collider other)
+    private void OnHitted(Collision collider)
     {
         print("hit");
-        other.GetComponent<BubbleTarget>().Hit();
+        collider.gameObject.GetComponent<BubbleTarget>().Hit();
         Destroy(gameObject);
     }
 }

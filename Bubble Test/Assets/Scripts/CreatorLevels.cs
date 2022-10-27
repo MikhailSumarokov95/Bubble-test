@@ -1,9 +1,12 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class CreatorLevels : MonoBehaviour
 {
+    public Action OnLevelCreated;
+    [SerializeField] private GameManager _gameManager;
     private Camera _camera;
     private GameObject[] _borders;
     readonly float _widthBorders = 2f;
@@ -13,6 +16,8 @@ public class CreatorLevels : MonoBehaviour
     {
         _camera = FindObjectOfType<Camera>();
         _borders = new GameObject[4];
+        OnLevelCreated += CreateScreenBorders;
+        OnLevelCreated += _gameManager.StartGame;
     }
 
     [ContextMenu("CreateScreenBorders")]

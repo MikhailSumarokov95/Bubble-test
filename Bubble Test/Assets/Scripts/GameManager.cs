@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    [SerializeField] private GameObject gun; 
     public bool IsPaused { get; private set; }
 
     public void Start()
@@ -13,7 +14,12 @@ public class GameManager : MonoBehaviour
 
     public void StartMenu()
     {
+        gun.SetActive(false);
+    }
 
+    public void StartGame()
+    {
+        gun.SetActive(true);
     }
 
     public void Pause()

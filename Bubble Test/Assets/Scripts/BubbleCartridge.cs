@@ -10,17 +10,16 @@ public class BubbleCartridge : MonoBehaviour
     {
         if (collider.gameObject.tag == "Border") return;
         if (collider.gameObject.tag == tag) OnHitted(collider);
-        else Missed();
+        else Missed(collider);
     }
 
-    private void Missed()
+    private void Missed(Collision collider)
     {
         print("miss");
-        //GetComponent<Rigidbody>().isKinematic = true;
-        //GetComponent<SphereCollider>().isTrigger = true;
         gameObject.AddComponent<BubbleTarget>();
         GetComponent<Rigidbody>().isKinematic = true;
         IsMissed = true;
+        transform.parent = collider.transform.parent;
         Destroy(this);
     }
 

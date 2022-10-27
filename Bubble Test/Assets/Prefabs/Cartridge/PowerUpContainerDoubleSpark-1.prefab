@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 19800000}
   - component: {fileID: 19900000}
   m_Layer: 0
-  m_Name: Shine-2-Particles
+  m_Name: Spark-2-Particles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26,12 +26,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.030805372, y: -0.0034123247, z: -0.02945659}
-  m_LocalScale: {x: 0.7692308, y: 0.7692309, z: 0.7692309}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.2693291, y: 0.26932922, z: 0.26932922}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 400002}
-  m_RootOrder: 0
+  m_Father: {fileID: 400006}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!198 &19800000
 ParticleSystem:
@@ -116,7 +116,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.44
+      scalar: 1.44
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -285,7 +285,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.16
+      scalar: 0.45
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -443,7 +443,7 @@ ParticleSystem:
         m_RotationOrder: 4
     startRotationX:
       serializedVersion: 2
-      minMaxState: 0
+      minMaxState: 3
       scalar: 0
       minScalar: 0
       maxCurve:
@@ -496,7 +496,7 @@ ParticleSystem:
         m_RotationOrder: 4
     startRotationY:
       serializedVersion: 2
-      minMaxState: 0
+      minMaxState: 3
       scalar: 0
       minScalar: 0
       maxCurve:
@@ -730,7 +730,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 1.9
+      value: 0.19244146
       mode: 0
       spread: 0
       speed:
@@ -4755,7 +4755,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6e629e770dbc8084185515f2d69bb428, type: 2}
+  - {fileID: 2100000, guid: 72cec98c07b5d364bb567b5579e4ec7e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4818,7 +4818,7 @@ GameObject:
   - component: {fileID: 19800002}
   - component: {fileID: 19900002}
   m_Layer: 0
-  m_Name: Shine-1-Particles
+  m_Name: Spark-1-Particles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4833,10 +4833,9 @@ Transform:
   m_GameObject: {fileID: 100002}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.106062286, y: 0.10606242, z: 0.10606242}
+  m_LocalScale: {x: 0.35012782, y: 0.35012794, z: 0.35012794}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 400000}
+  m_Children: []
   m_Father: {fileID: 400006}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5092,7 +5091,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.34
+      scalar: 0.33
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -5250,7 +5249,7 @@ ParticleSystem:
         m_RotationOrder: 4
     startRotationX:
       serializedVersion: 2
-      minMaxState: 0
+      minMaxState: 3
       scalar: 0
       minScalar: 0
       maxCurve:
@@ -5303,7 +5302,7 @@ ParticleSystem:
         m_RotationOrder: 4
     startRotationY:
       serializedVersion: 2
-      minMaxState: 0
+      minMaxState: 3
       scalar: 0
       minScalar: 0
       maxCurve:
@@ -5537,7 +5536,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 2.4
+      value: 0.19244146
       mode: 0
       spread: 0
       speed:
@@ -9562,7 +9561,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 870b1aab6db6b3a4793e20ba16c84c6d, type: 2}
+  - {fileID: 2100000, guid: f6beb56c5f5b3294c9c6339ed839ba9f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -9623,7 +9622,6 @@ GameObject:
   m_Component:
   - component: {fileID: 400004}
   - component: {fileID: 3300000}
-  - component: {fileID: 13500000}
   - component: {fileID: 2300000}
   - component: {fileID: 11400000}
   m_Layer: 0
@@ -9656,19 +9654,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 100004}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!135 &13500000
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 100004}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &2300000
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9689,7 +9674,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 78b3d2607f4c8c843b131bd40468e68a, type: 2}
+  - {fileID: 2100000, guid: 617243c6fdcf2d246b04b3da0e06d673, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -9734,11 +9719,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 400006}
-  - component: {fileID: 4960335783117209561}
-  - component: {fileID: -507476523166380960}
+  - component: {fileID: 9036885339799904610}
+  - component: {fileID: -4788447583139983553}
+  - component: {fileID: -4321231690899915355}
   m_Layer: 0
-  m_Name: PowerUpContainerDoubleShine
-  m_TagString: Untagged
+  m_Name: PowerUpContainerDoubleSpark-1
+  m_TagString: YellowBubble
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9751,17 +9737,18 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 100006}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 33.07224, y: -4.701405, z: 49.404114}
+  m_LocalPosition: {x: 33.01983, y: -4.701405, z: 49.412678}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 400004}
   - {fileID: 400010}
   - {fileID: 400002}
+  - {fileID: 400000}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!54 &4960335783117209561
+--- !u!54 &9036885339799904610
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9776,8 +9763,8 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 120
-  m_CollisionDetection: 1
---- !u!135 &-507476523166380960
+  m_CollisionDetection: 2
+--- !u!135 &-4788447583139983553
 SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9790,6 +9777,18 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &-4321231690899915355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f15924a693bcd74e92337dab8ccbdc2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &100010
 GameObject:
   m_ObjectHideFlags: 0
@@ -9800,7 +9799,6 @@ GameObject:
   m_Component:
   - component: {fileID: 400010}
   - component: {fileID: 3300002}
-  - component: {fileID: 13500002}
   - component: {fileID: 2300002}
   - component: {fileID: 11400002}
   m_Layer: 0
@@ -9833,19 +9831,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 100010}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!135 &13500002
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 100010}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &2300002
 MeshRenderer:
   m_ObjectHideFlags: 0

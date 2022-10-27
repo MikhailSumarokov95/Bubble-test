@@ -7,11 +7,19 @@ public class Gun : MonoBehaviour
     [SerializeField] private GameObject[] bubbles;
     [SerializeField] private float magnitudeForce;
     private GameObject _bubble;
+    private BubbleCartridge _bubbleCartidge;
 
     private void Update()
     {
-        if (_bubble == null) CreateBubbles();
+        if (_bubble == null || _bubbleCartidge.IsMissed) CreateBubbles();
         if (Input.GetMouseButtonUp(0)) Fire();
+    }
+
+    private void CreateBubbles()
+    {
+        var numberBubble = Random.Range(0, bubbles.Length - 1);
+        _bubble = Instantiate(bubbles[numberBubble], transform.position, Quaternion.identity);
+        _bubbleCartidge = _bubble.GetComponent<BubbleCartridge>();
     }
 
     private void Fire()
@@ -21,9 +29,5 @@ public class Gun : MonoBehaviour
         _bubble.GetComponent<Rigidbody>().AddForce(direction * magnitudeForce, ForceMode.Force);
     }
 
-    private void CreateBubbles()
-    {
-        var numberBubble = Random.Range(0, bubbles.Length - 1);
-        _bubble = Instantiate(bubbles[numberBubble], transform.position, Quaternion.identity);
-    }
+
 }

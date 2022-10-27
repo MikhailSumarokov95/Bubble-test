@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour
 
     public void StartGame()
     {
+        print("StartGame");
         gun.SetActive(true);
     }
 

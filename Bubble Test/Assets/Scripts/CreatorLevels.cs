@@ -17,7 +17,6 @@ public class CreatorLevels : MonoBehaviour
         _camera = FindObjectOfType<Camera>();
         _borders = new GameObject[4];
         OnLevelCreated += CreateScreenBorders;
-        OnLevelCreated += _gameManager.StartGame;
     }
 
     [ContextMenu("CreateScreenBorders")]

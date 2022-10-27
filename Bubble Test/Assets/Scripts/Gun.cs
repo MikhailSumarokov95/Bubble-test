@@ -24,10 +24,11 @@ public class Gun : MonoBehaviour
 
     private void Fire()
     {
-        var pressPoint = new Vector3(Input.mousePosition.x, Input.mousePosition.y, Camera.main.transform.position.z);
-        var direction = (transform.position - Camera.main.ScreenToWorldPoint(pressPoint)).normalized;
+        var pressPoint = new Vector3(Input.mousePosition.x, Input.mousePosition.y, - Camera.main.transform.position.z);
+        var direction = (Camera.main.ScreenToWorldPoint(pressPoint) - transform.position).normalized;
         _bubble.GetComponent<Rigidbody>().AddForce(direction * magnitudeForce, ForceMode.Force);
+        print(pressPoint);
+        print((transform.position - Camera.main.ScreenToWorldPoint(pressPoint)));
+        print(direction);
     }
-
-
 }

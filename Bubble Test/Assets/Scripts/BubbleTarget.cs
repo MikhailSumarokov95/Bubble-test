@@ -5,7 +5,7 @@ using UnityEngine;
 public class BubbleTarget : MonoBehaviour
 {
     private bool _isDestroy;
-    [ContextMenu("Hit")]
+
     public void Hit()
     {
         if (_isDestroy) return;

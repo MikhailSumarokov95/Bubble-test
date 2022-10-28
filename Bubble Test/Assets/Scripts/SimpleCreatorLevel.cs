@@ -11,8 +11,8 @@ public class SimpleCreatorLevel : CreatorLevels
     public void CreateLevel(int number)
     {
         foreach (var creatorlevels in _creatorsLevels) 
-            if (creatorlevels.levelOnScene != null) Destroy(creatorlevels.levelOnScene);
-        levelOnScene = Instantiate(levels[number - 1]);
+            if (creatorlevels.levelInScene != null) Destroy(creatorlevels.levelInScene);
+        levelInScene = Instantiate(levels[number - 1]);
         CreateScreenBorders();
     }    
 }

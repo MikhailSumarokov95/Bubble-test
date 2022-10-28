@@ -15,8 +15,9 @@ public class RandomCreatorLevel : CreatorLevels
     private float _yDistanceBetweenBubbles;
     private float _xDistanceBetweenBubbles;
 
-    private void Start()
+    protected override void Start()
     {
+        base.Start();
         _yDistanceBetweenBubbles = 
             Camera.main.WorldToViewportPoint
             (new Vector3(0, bubbles[0].GetComponent<SphereCollider>().radius * 2f, 0)).y -
@@ -32,8 +33,8 @@ public class RandomCreatorLevel : CreatorLevels
     public void CreateLevel()
     {
         foreach (var creatorlevels in _creatorsLevels) 
-            if (creatorlevels.levelOnScene != null) Destroy(creatorlevels.levelOnScene);
-        levelOnScene = new GameObject("level");
+            if (creatorlevels.levelInScene != null) Destroy(creatorlevels.levelInScene);
+        levelInScene = new GameObject("level");
         for (int i = 0; i < countLines; i++)
         {
             var yPosition = yOffsetTopScreen + _yDistanceBetweenBubbles * i;
@@ -45,7 +46,7 @@ public class RandomCreatorLevel : CreatorLevels
                 var numberBubbles = Random.Range(0, bubbles.Length - 1);
                 Instantiate(bubbles[numberBubbles],
                     new Vector3(position.x, position.y, 0),
-                    Quaternion.identity, levelOnScene.transform);
+                    Quaternion.identity, levelInScene.transform);
             }
         }
         CreateScreenBorders();

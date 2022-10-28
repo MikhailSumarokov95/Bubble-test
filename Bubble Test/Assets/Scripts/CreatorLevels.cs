@@ -8,13 +8,16 @@ public class CreatorLevels : MonoBehaviour
 {
     private GameObject[] _borders;
     readonly float _widthBorders = 2f;
-    public GameObject levelOnScene { get; protected set; }
+    public GameObject levelInScene { get; protected set; }
+
+    protected virtual void Start()
+    {
+        _borders = new GameObject[4];
+    }
 
     [ContextMenu("CreateScreenBorders")]
     protected void CreateScreenBorders()
     {
-        if (_borders != null) return;
-        _borders = new GameObject[4];
         var leftTopPointScreen = Camera.main.ViewportToWorldPoint(new Vector3(1, 0, Camera.main.transform.position.z));
         var rightBotPointScreen = Camera.main.ViewportToWorldPoint(new Vector3(0, 1, Camera.main.transform.position.z));
 
@@ -29,7 +32,7 @@ public class CreatorLevels : MonoBehaviour
         foreach (var border in _borders)
         {
             border.tag = "Border";
-            border.transform.parent = levelOnScene.transform;
+            border.transform.parent = levelInScene.transform;
             border.AddComponent<BoxCollider>();
         }
 

@@ -467,7 +467,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd57e3be3f0f0724ab8ffd0022007095, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _gameManager: {fileID: 56617100}
   bubbles:
   - {fileID: 100004, guid: f10a79f37ff522b4280e2844332bef77, type: 3}
   - {fileID: 100006, guid: 339ec13e94b70ca469275f6f7e29bac3, type: 3}
@@ -3289,8 +3288,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f52fe2357dafeda40873e2e2ba4c2647, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _gameManager: {fileID: 56617100}
-  levels: []
+  levels:
+  - {fileID: 1175781686620182576, guid: 0384cad1534bb164a8cf15d323d146f7, type: 3}
+  - {fileID: 437615513383400198, guid: 24f0d33680b2f9043b1ea95111d84118, type: 3}
+  - {fileID: 4315384373245525136, guid: bca5a4486d3c9f946ba99b20d5895a05, type: 3}
 --- !u!4 &2080776821
 Transform:
   m_ObjectHideFlags: 0

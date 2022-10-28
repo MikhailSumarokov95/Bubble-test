@@ -5,10 +5,9 @@ using UnityEngine;
 
 public class CreatorLevels : MonoBehaviour
 {
-    [SerializeField] private GameManager _gameManager;
     private GameObject[] _borders;
     readonly float _widthBorders = 2f;
-    protected GameObject levelOnScene;
+    public GameObject levelOnScene { get; protected set; }
 
     [ContextMenu("CreateScreenBorders")]
     protected void CreateScreenBorders()

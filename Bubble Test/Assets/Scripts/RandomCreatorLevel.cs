@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class RandomCreatorLevel : CreatorLevels
 {
+    [SerializeField] private CreatorLevels[] _creatorsLevels;
     [SerializeField] private GameObject[] bubbles;
     [SerializeField] private int countLines;
     [SerializeField] private int countColumns;
@@ -30,7 +31,8 @@ public class RandomCreatorLevel : CreatorLevels
     [ContextMenu("CreateLevel")]
     public void CreateLevel()
     {
-        Destroy(levelOnScene);
+        foreach (var creatorlevels in _creatorsLevels) 
+            if (creatorlevels.levelOnScene != null) Destroy(creatorlevels.levelOnScene);
         levelOnScene = Instantiate(new GameObject("level"));
         for (int i = 0; i < countLines; i++)
         {

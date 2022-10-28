@@ -31,9 +31,10 @@ public class GameManager : MonoBehaviour
     public void Resume()
     {
         Time.timeScale = 1;
+        StartCoroutine("DelayResume");
     }
 
-    private IEnumerator Delay()
+    private IEnumerator DelayResume()
     {
         yield return new WaitForSecondsRealtime(1);
         IsPaused = false;

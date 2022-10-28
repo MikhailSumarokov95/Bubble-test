@@ -15,7 +15,6 @@ public class BubbleCartridge : MonoBehaviour
 
     private void Missed(Collision collider)
     {
-        print("miss");
         gameObject.AddComponent<BubbleTarget>();
         GetComponent<Rigidbody>().isKinematic = true;
         IsMissed = true;
@@ -25,7 +24,6 @@ public class BubbleCartridge : MonoBehaviour
 
     private void OnHitted(Collision collider)
     {
-        print("hit");
         collider.gameObject.GetComponent<BubbleTarget>().Hit();
         Destroy(gameObject);
     }

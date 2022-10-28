@@ -33,7 +33,7 @@ public class RandomCreatorLevel : CreatorLevels
     {
         foreach (var creatorlevels in _creatorsLevels) 
             if (creatorlevels.levelOnScene != null) Destroy(creatorlevels.levelOnScene);
-        levelOnScene = Instantiate(new GameObject("level"));
+        levelOnScene = new GameObject("level");
         for (int i = 0; i < countLines; i++)
         {
             var yPosition = yOffsetTopScreen + _yDistanceBetweenBubbles * i;

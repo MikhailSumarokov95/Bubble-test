@@ -19,7 +19,6 @@ public class GameManager : MonoBehaviour
 
     public void StartGame()
     {
-        print("StartGame");
         gun.SetActive(true);
     }
 
@@ -32,7 +31,6 @@ public class GameManager : MonoBehaviour
     public void Resume()
     {
         Time.timeScale = 1;
-        StartCoroutine("Delay");
     }
 
     private IEnumerator Delay()

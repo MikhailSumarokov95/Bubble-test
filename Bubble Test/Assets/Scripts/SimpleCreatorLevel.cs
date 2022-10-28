@@ -11,6 +11,6 @@ public class SimpleCreatorLevel : CreatorLevels
     {
         Destroy(levelOnScene);
         levelOnScene = Instantiate(levels[number - 1]);
-        OnLevelCreated?.Invoke();
+        CreateScreenBorders();
     }    
 }
